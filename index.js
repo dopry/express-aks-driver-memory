@@ -5,6 +5,7 @@
 var util = require('util');
 var Base = require('express-aks-driver-base');
 
+
 /**
  * Initalize a new Driver Object
  */
@@ -14,7 +15,9 @@ function Driver() {
     return this;
 }
 
+
 util.inherits(Driver, Base);
+
 
 /**
  * Find a single key from the email uid
@@ -40,8 +43,8 @@ Driver.prototype.findOne = function(email, callback) {
 
         key = self._db[key.domain][key.user];
         callback(null, key);
-
     }
+
     // base validation and parsing is implemented in the generic driver.
     Driver.super_.prototype.findOne.call(this, email, _findOne);
 };
@@ -54,8 +57,9 @@ Driver.prototype.findOne = function(email, callback) {
  */
 Driver.prototype.find = function(domain, callback) {
     var self = this;
-    Base.prototype.find.call(this, domain, function(err, keys) {
-        if (err) {
+
+    function _find(err, keys) {
+         if (err) {
             callback(err);
             return;
         }
@@ -69,12 +73,11 @@ Driver.prototype.find = function(domain, callback) {
             keys.push(self._db[domain][user]);
         });
         callback(null, keys);
-    });
+    }
 
+    // base validation and parsing is implemented in the generic driver.
+    Driver.super_.prototype.find.call(this, domain, _find);
 };
-
-
-
 
 
 /**
@@ -85,6 +88,7 @@ Driver.prototype.find = function(domain, callback) {
  */
 Driver.prototype.add = function(email, keytext, callback) {
     var self = this;
+
     function _add(err, key) {
         if (err) {
             callback(err);
@@ -97,6 +101,7 @@ Driver.prototype.add = function(email, keytext, callback) {
         callback(null, key);
     }
 
+    // base validation and parsing is implemented in the generic driver.
     Driver.super_.prototype.add.call(this, email, keytext, _add);
 };
 
