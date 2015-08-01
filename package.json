@@ -18,7 +18,10 @@
     "express-aks-driver-base": "dopry/express-aks-driver-base.git"
   },
   "devDependencies": {
-    "mocha": "^2.2.5"
+    "coveralls": "^2.11.3",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2"
   },
   "main": "./index.js",
   "scripts": {

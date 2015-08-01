@@ -2,11 +2,9 @@
 
 [![Build Status](https://travis-ci.org/dopry/express-aks-driver-memory.svg?branch=master)](https://travis-ci.org/dopry/express-aks-driver-memory)
 
-[![Dependency Status](https://david-dm.org/dopry/express-aks-driver-base.svg)](https://david-dm.org/dopry/express-aks-driver-memory)
+[![Dependency Status](https://david-dm.org/dopry/express-aks-driver-memory.svg)](https://david-dm.org/dopry/express-aks-driver-memory)
 
-[![codecov.io](http://codecov.io/github/dopry/express-aks-driver-base/coverage.svg?branch=master)](http://codecov.io/github/dopry/express-aks-driver-base?branch=master)
-
-
+[![Coverage Status](https://coveralls.io/repos/dopry/express-aks-driver-memory/badge.svg?branch=master&service=github)](https://coveralls.io/github/dopry/express-aks-driver-memory?branch=master)
 
 This is a Memory storage driver for the reference implementation of the  [HTTP Authoritative Keyserver](https://github.com/AuthoritativeKeyServerWG/aks).
 
