@@ -1,0 +1,35 @@
+{
+  "name": "express-aks-driver-memory",
+  "description": "Authoritative PGP Key Server - Memory Storage Driver",
+  "version": "0.0.0",
+  "maintainers": [
+    "Darrel O'Pry <darrel.opry@spry-group.com>"
+  ],
+  "keywords": [
+    "pgp",
+    "OpenPGP",
+    "hkp",
+    "key server",
+    "authoritative",
+    "aks",
+    "hakp"
+  ],
+  "dependencies": {
+    "express-aks-driver-generic": "https://github.com/dopry/express-aks-driver-base.git"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dopry/express-aks-driver-memory.git"
+  },
+  "homepage": "https://github.com/dopry/express-aks-driver-memory"
+}
