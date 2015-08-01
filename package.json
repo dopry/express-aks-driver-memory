@@ -15,7 +15,7 @@
     "hakp"
   ],
   "dependencies": {
-    "express-aks-driver-generic": "https://github.com/dopry/express-aks-driver-base.git"
+    "express-aks-driver-base": "https://github.com/dopry/express-aks-driver-base.git"
   },
   "devDependencies": {
     "mocha": "^2.2.5"
