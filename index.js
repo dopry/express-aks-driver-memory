@@ -67,10 +67,9 @@ Driver.prototype.find = function(domain, callback) {
             return callback('domain not found');
         }
         Object.keys(self._db[domain]).forEach(function(user) {
-            if (!self._db[domain].hasOwnProperty(user)) {
-                return;
+            if (self._db[domain].hasOwnProperty(user)) {
+                keys.push(self._db[domain][user]);
             }
-            keys.push(self._db[domain][user]);
         });
         callback(null, keys);
     }
